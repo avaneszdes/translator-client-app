@@ -10,6 +10,7 @@
   margin: 10px;
 }
 
+
 .languages-block{
   display: flex;
   align-items: center;
@@ -17,6 +18,7 @@
   width: 30%;
   margin-left: 30px;
 }
+
 .arrow-btn{
   background-image: url(./images/arrow.png);
   width: 35px;
@@ -34,6 +36,14 @@
   background-position: center;
   border: none;
   background-color: transparent;
+}
+
+.mic-start:hover{
+  background-color: #91f154;
+  width: 35px;
+  height: 35px;
+  border: solid 0.5px green;
+  border-radius: 7px;
 }
 
 .mic-stop{
@@ -56,16 +66,38 @@
   background-color: transparent;
 }
 
+.mic-start-second:hover{
+  background-color: #b1ee8b;
+  width: 35px;
+  height: 35px;
+  border: solid 0.5px green;
+  border-radius: 7px;
+}
+.mic-stop:hover{
+  background-color: #b1ee8b;
+  width: 35px;
+  height: 35px;
+  border: solid 0.5px green;
+  border-radius: 7px;
+}
 
 .clear-btn{
   background-image: url(./images/close.png);
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   background-repeat: no-repeat;
   background-position: center;
   border: none;
   padding-right: 40px;
   background-color: transparent;
+}
+
+.clear-btn:hover{
+  background-color: #b1ee8b;
+  width: 35px;
+  height: 35px;
+  border: solid 0.5px green;
+  border-radius: 7px;
 }
 
 .mic-stop-second{
@@ -77,9 +109,19 @@
   border: none;
   background-color: transparent;
 }
-
+.mic-stop-second:hover{
+  background-color: #b1ee8b;
+  width: 35px;
+  height: 35px;
+  border: solid 0.5px green;
+  border-radius: 7px;
+}
 .arrow-btn:hover{
-  background-color: #e6fcdc;
+  background-color: #b1ee8b;
+  width: 35px;
+  height: 35px;
+  border: solid 0.5px green;
+  border-radius: 7px;
 }
 
 .TextArea {
@@ -90,89 +132,48 @@
   padding: 10px;
 }
 
-.Btn{
-  margin: 5px 0 5px 0;
-  height: 40px;
-  background-color: #acf5b0;
+.microphone-btn{
+  background-image: url(./images/microp.png);
+  width: 32px;
+  height: 32px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  padding-right: 40px;
+  background-color: transparent;
+}
+
+.microphone-btn:hover{
+  background-color: #b1ee8b;
+  width: 35px;
+  height: 35px;
+  border: solid 0.5px green;
   border-radius: 7px;
-  border: solid .5px #0b5f55;
+}
+
+.microphone-btn-close{
+  background-image: url(./images/microClose.png);
+  width: 32px;
+  height: 32px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  padding-right: 40px;
+  background-color: transparent;
+}
+.microphone-btn-close:hover{
+  background-color: #b1ee8b;
+  width: 35px;
+  height: 35px;
+  border: solid 0.5px green;
+  border-radius: 7px;
 }
 
 body{
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(45deg, #f8eded, #faebe0, #f8f8e1, #e4fdda, #00ffd5);
+  background: linear-gradient(45deg, #f5cfcf, #f3d9c5, #f5f5b2, #e4fdda, #00ffd5);
   display: flex;
   justify-content: center;
   align-items: center;
 }
-/*translator-client-app*/
-.Btn:hover {
-  text-transform: uppercase;
-  background: #91ece2;
-  border: solid .5px #dc5fa3;
-}
-
-.glow-on-hover {
-  width: 100%;
-  height: 50px;
-  border: none;
-  outline: none;
-  color: #fff;
-  background: #4e9327;
-  cursor: pointer;
-  position: relative;
-  z-index: 0;
-  border-radius: 7px;
-  margin: 7px 0 7px 0;
-}
-
-.glow-on-hover:before {
-  content: '';
-  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-  position: absolute;
-  top: -2px;
-  left:-2px;
-  background-size: 400%;
-  z-index: -1;
-  filter: blur(5px);
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
-  animation: glowing 20s linear infinite;
-  opacity: 0;
-  transition: opacity .3s ease-in-out;
-  border-radius: 10px;
-}
-
-.glow-on-hover:active {
-  background: #4e9327;
-}
-
-.glow-on-hover:active:after {
-  background: transparent;
-}
-
-.glow-on-hover:hover:before {
-  opacity: 1;
-}
-
-.glow-on-hover:after {
-  z-index: -1;
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: #4e9327;
-  left: 0;
-  top: 0;
-  border-radius: 10px;
-}
-
-@keyframes glowing {
-  0% { background-position: 0 0; }
-  50% { background-position: 400% 0; }
-  100% { background-position: 0 0; }
-}
-
-
-
