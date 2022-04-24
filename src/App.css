@@ -2,37 +2,177 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.text-areas-block{
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  width: 100%;
+  margin: 10px;
+}
+
+.languages-block{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 30%;
+  margin-left: 30px;
+}
+.arrow-btn{
+  background-image: url(./images/arrow.png);
+  width: 35px;
+  height: 35px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+}
+
+.mic-start{
+  background-image: url(./images/volume.png);
+  width: 35px;
+  height: 35px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  background-color: transparent;
+}
+
+.mic-stop{
+  background-image: url(./images/stop.png);
+  width: 35px;
+  height: 35px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  background-color: transparent;
+}
+
+.mic-start-second{
+  background-image: url(./images/volume.png);
+  width: 35px;
+  height: 35px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  background-color: transparent;
+}
+
+
+.clear-btn{
+  background-image: url(./images/close.png);
+  width: 25px;
+  height: 25px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  padding-right: 40px;
+  background-color: transparent;
+}
+
+.mic-stop-second{
+  background-image: url(./images/stop.png);
+  width: 35px;
+  height: 35px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  background-color: transparent;
+}
+
+.arrow-btn:hover{
+  background-color: #e6fcdc;
+}
+
+.TextArea {
+  min-height: 200px;
+  width: 90%;
+  border-radius: 7px;
+  font-size: 18px;
+  padding: 10px;
+}
+
+.Btn{
+  margin: 5px 0 5px 0;
+  height: 40px;
+  background-color: #acf5b0;
+  border-radius: 7px;
+  border: solid .5px #0b5f55;
+}
+
+body{
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(45deg, #f8eded, #faebe0, #f8f8e1, #e4fdda, #00ffd5);
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+}
+/*translator-client-app*/
+.Btn:hover {
+  text-transform: uppercase;
+  background: #91ece2;
+  border: solid .5px #dc5fa3;
 }
 
-.App-link {
-  color: #61dafb;
+.glow-on-hover {
+  width: 100%;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #4e9327;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 7px;
+  margin: 7px 0 7px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
 }
+
+.glow-on-hover:active {
+  background: #4e9327;
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #4e9327;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+
+
